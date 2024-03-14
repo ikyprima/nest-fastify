@@ -6,9 +6,10 @@ import { PrismaService } from './prisma.service';
 import { HeroController } from './hero/hero.controllers';
 import { UserModule } from './user/user.module';
 import { KategoriModule } from './kategori/kategori.module';
+import { BcryptService } from './bcrypt/bcrypt.service';
 @Module({
   imports: [UserModule, KategoriModule],
   controllers: [AppController,HeroController],
-  providers: [AppService,PostService,PrismaService],
+  providers: [AppService,PostService,PrismaService, BcryptService],
 })
 export class AppModule {}
